@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アディゲ語・英語辞書</title>
+    <style>
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+        }
+        .word-list {
+            width: 30%;
+            padding: 10px;
+            border-right: 1px solid #ddd;
+            overflow-y: auto;
+            max-height: 90vh;
+        }
+        .word-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .word-list ul li {
+            padding: 8px;
+            cursor: pointer;
+            border-bottom: 1px solid #ddd;
+        }
+        .word-list ul li:hover {
+            background-color: #f0f0f0;
+        }
+        .content {
+            width: 70%;
+            padding: 20px;
+        }
+        .search-box {
+            margin-bottom: 10px;
+        }
+        .search-box input {
+            width: 90%;
+            padding: 8px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="word-list">
+            <div class="search-box">
+                <input type="text" id="search" placeholder="単語を検索...">
+            </div>
+            <ul id="wordList"></ul>
+        </div>
+        <div class="content">
+            <h2 id="adygheWord">単語を選んでください</h2>
+            <p><strong>翻訳:</strong> <span id="englishWord"></span></p>
+            <p><strong>ローマ字転写:</strong> <span id="transliteration"></span></p>
+        </div>
+    </div>
+
+    <script src="dictionary.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const wordListElement = document.getElementById('wordList');
+            const searchInput = document.getElementById('search');
+            const adygheWordElement = document.getElementById('adygheWord');
+            const englishWordElement = document.getElementById('englishWord');
+            const transliterationElement = document.getElementById('transliteration');
+
+            // 単語一覧を表示する
+            function renderWordList(words) {
+                wordListElement.innerHTML = '';
+                words.forEach((word) => {
+                    const li = document.createElement('li');
+                    li.textContent = word.adyghe;
+                    li.addEventListener('click', () => {
+                        displayWord(word);
+                    });
+                    wordListElement.appendChild(li);
+                });
+            }
+
+            // 単語を選択した時に表示する
+            function displayWord(word) {
+                adygheWordElement.textContent = word.adyghe;
+                englishWordElement.textContent = word.english;
+                transliterationElement.textContent = word.transliteration;
+            }
+
+            // 検索機能
+            searchInput.addEventListener('input', function () {
+                const query = searchInput.value.toLowerCase();
+                const filteredWords = dictionary.filter(word => 
+                    word.adyghe.toLowerCase().includes(query) || 
+                    word.english.toLowerCase().includes(query)
+                );
+                renderWordList(filteredWords);
+            });
+
+            // 初期表示で全単語をリスト表示
+            renderWordList(dictionary);
+        });
+    </script>
+</body>
+</html>
