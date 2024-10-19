@@ -1,6 +1,6 @@
 const dictionary = [
     { adyghe: 'псэ', english: 'soul', transliteration: 'pse' },
-    { adyghe: 'сје', english: 'I', transliteration: 'sje' },
+    { adyghe: 'сэ', english: 'I', transliteration: 'sje' },
     { adyghe: 'ар', english: 'he', transliteration: 'ar' },
     { adyghe: 'жирафжер', english: 'giraffe', transliteration: 'zhirafjer' },
     { adyghe: 'пылхфжер', english: 'elephant', transliteration: 'pylhfjer' },
