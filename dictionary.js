@@ -1,17 +1,13 @@
 const dictionary = [
-    { adyghe: 'псэ', english: 'water', transliteration: 'pse' },
-    { adyghe: 'лъэпэ', english: 'fire', transliteration: 'lhepe' },
-    { adyghe: 'шъу', english: 'tree', transliteration: 'sh’u' },
-    { adyghe: 'щӏы', english: 'dog', transliteration: 'sh’ı' },
-    { adyghe: 'гуащэ', english: 'cat', transliteration: 'guashe' },
-    { adyghe: 'кӏалэ', english: 'horse', transliteration: 'k’alé' },
-    { adyghe: 'ху', english: 'cow', transliteration: 'khu' },
-    { adyghe: 'бзылъ', english: 'wolf', transliteration: 'bzylh' },
-    { adyghe: 'хъуакӏу', english: 'fox', transliteration: 'kh’wak’u' },
-    
-    { adyghe: 'гъэщхьэ', english: 'bee', transliteration: 'gheshhe' },
-    { adyghe: 'чӏэлэ', english: 'ant', transliteration: 'ch’ele' },
-    { adyghe: 'шъуней', english: 'butterfly', transliteration: 'sh’uney' },
-    { adyghe: 'кӏуакӏу', english: 'spider', transliteration: 'k’uak’u' },
-    { adyghe: 'пӏы', english: 'fly', transliteration: 'p’y' }
+    { adyghe: 'псэ', english: 'soul', transliteration: 'pse' },
+    { adyghe: 'сје', english: 'I', transliteration: 'sje' },
+    { adyghe: 'ар', english: 'he', transliteration: 'ar' },
+    { adyghe: 'жирафжер', english: 'giraffe', transliteration: 'zhirafjer' },
+    { adyghe: 'пылхфжер', english: 'elephant', transliteration: 'pylhfjer' },
+    { adyghe: 'бльефжер', english: 'snake', transliteration: 'bljefjer' },
+    { adyghe: 'асланхжер', english: 'lion', transliteration: 'aslanhjer' },
+    { adyghe: 'пингвинхжер', english: 'penguin', transliteration: 'Pingvinhjer' },
+    { adyghe: 'кенгуерхжер', english: 'kangaroo', transliteration: 'kengurehjer' },
+    { adyghe: 'испанием', english: 'Spain', transliteration: 'ispaniem' },
+    { adyghe: 'лондон', english: 'London', transliteration: 'london' },
 ];
